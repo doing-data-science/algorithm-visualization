@@ -43,7 +43,7 @@ var play = function(rate) {
   bufferSource.start(0);
 };
 
-function ShowBorad(options) {
+function ShowBoard(options) {
   var opts = options || {};
   opts.width = opts.width || WIDTH;
   opts.height = opts.height || 300;
@@ -54,7 +54,7 @@ function ShowBorad(options) {
   this.init();
 }
 
-ShowBorad.prototype.init = function() {
+ShowBoard.prototype.init = function() {
   var canvas = this.options.container;
   canvas.width = this.options.width;
   canvas.height = this.options.height;
@@ -62,7 +62,7 @@ ShowBorad.prototype.init = function() {
   this.context = context;
 };
 
-ShowBorad.prototype.render = function() {
+ShowBoard.prototype.render = function() {
   var data = this.buffer.shift();
   if (!data) {
     return;
@@ -90,11 +90,11 @@ ShowBorad.prototype.render = function() {
   }.bind(this));
 };
 
-ShowBorad.prototype.clearBuffer = function() {
+ShowBoard.prototype.clearBuffer = function() {
   this.buffer = [];
 };
 
-ShowBorad.prototype.addToBuffer = function(data, data2) {
+ShowBoard.prototype.addToBuffer = function(data, data2) {
   this.buffer.push([data, data2]);
 };
 
@@ -114,11 +114,11 @@ document.body.addEventListener('click', function(e) {
   var name = target.id;
   var handle = sorting[name];
   var element = document.querySelector('#element-' + name);
-  element.showBorad.clearBuffer();
+  element.showBoard.clearBuffer();
   handle(makeRandomArray(comparison), function(a, b) {
     return a - b;
   }, function(array, current) {
-    element.showBorad.addToBuffer(array.slice(0), current);
+    element.showBoard.addToBuffer(array.slice(0), current);
   });
 });
 
@@ -128,27 +128,27 @@ var init = function() {
     var canvas = document.createElement('canvas');
     canvas.id = 'element-' + name;
     document.querySelector('#boards').appendChild(canvas);
-    var showBorad = new ShowBorad({
+    var showBoard = new ShowBoard({
       height: 150,
       container: canvas
     });
-    canvas.showBorad = showBorad;
-    showBorad.clearBuffer();
+    canvas.showBoard = showBoard;
+    showBoard.clearBuffer();
     var temp = +new Date;
     var res = handle(makeRandomArray(comparison), function(a, b) {
       return a - b;
     }, function(array, current) {
       if (!isMobile) {
-        showBorad.addToBuffer(array.slice(0), current);
+        showBoard.addToBuffer(array.slice(0), current);
       }
     });
     var temp1 = +new Date;
-    showBorad.options.text = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
+    showBoard.options.text = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
     var button = document.createElement('button');
     button.innerHTML = name;
     button.id = name;
     document.querySelector('#buttons').appendChild(button);
-    renderQueue.push(showBorad);
+    renderQueue.push(showBoard);
   });
 
   var Timer = Monitor.Timer;
