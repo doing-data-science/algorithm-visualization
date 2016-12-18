@@ -1,0 +1,29 @@
+{
+  "name": "algorithm-collection",
+  "version": "1.0.0",
+  "description": "Visualization and Audibilization of algorithms",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/algorithm-collection.git"
+  },
+  "dependencies": {},
+  "keywords": [
+    "sort"
+  ],
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.js",
+    "test-travis": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- -t 20000 test/*.test.js"
+  },
+  "homepage": "https://github.com/xudafeng/algorithm-collection",
+  "author": "xudafeng",
+  "email": "xudafeng[at]126.com",
+  "blog": "http://xdf.me",
+  "license": "MIT"
+}
+
