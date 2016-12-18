@@ -34,7 +34,7 @@ Space complexity(Auxiliary)
 - Shortest Paths Problem
   - Dijkstra
 - Topological Sort
-- [Astar](//github.com/xudafeng/AStar)
+- [Astar](//github.com/xudafeng/AStar) [demo](//xudafeng.github.io/pillow/examples/astar/)
 
 ## Data Structures[TODO]
 
