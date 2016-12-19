@@ -1,11 +1,13 @@
-# [Algorithm Collection](//github.com/xudafeng/algorithm-collection)
-
-[![build status][travis-image]][travis-url]
-
-Visualization and Audibilization of algorithms.
+# Algorithm Collection [![build status][travis-image]][travis-url]
 
 [travis-image]: https://img.shields.io/travis/xudafeng/algorithm-collection.svg?style=flat-square
 [travis-url]: https://travis-ci.org/xudafeng/algorithm-collection
+
+---
+
+Visualization and Audibilization of algorithms.
+
+### [Live demo](//xudafeng.github.io/algorithm-collection)
 
 ## Sorting algorithms
 
