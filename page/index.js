@@ -1,7 +1,7 @@
 'use strict';
 
 var boardWidth = document.querySelector('#boards').clientWidth;
-var WIDTH = boardWidth / 3 - 10;
+var WIDTH = boardWidth / 3 - 15;
 
 var isMobile = boardWidth < 500;
 
@@ -109,30 +109,24 @@ var makeRandomArray = function(size) {
   return res;
 };
 
-document.body.addEventListener('click', function(e) {
-  var target = e.target;
-  var name = target.id;
-  var handle = sorting[name];
-  var element = document.querySelector('#element-' + name);
-  element.showBoard.clearBuffer();
-  handle(makeRandomArray(comparison), function(a, b) {
-    return a - b;
-  }, function(array, current) {
-    element.showBoard.addToBuffer(array.slice(0), current);
-  });
-});
-
 var init = function() {
   Object.keys(sorting).forEach(function(name) {
     var handle = sorting[name];
     var canvas = document.createElement('canvas');
-    canvas.id = 'element-' + name;
     document.querySelector('#boards').appendChild(canvas);
     var showBoard = new ShowBoard({
       height: 150,
       container: canvas
     });
-    canvas.showBoard = showBoard;
+    canvas.addEventListener('click', function(e) {
+      var handle = sorting[name];
+      showBoard.clearBuffer();
+      handle(makeRandomArray(comparison), function(a, b) {
+        return a - b;
+      }, function(array, current) {
+        showBoard.addToBuffer(array.slice(0), current);
+      });
+    });
     showBoard.clearBuffer();
     var temp = +new Date;
     var res = handle(makeRandomArray(comparison), function(a, b) {
@@ -142,12 +136,10 @@ var init = function() {
         showBoard.addToBuffer(array.slice(0), current);
       }
     });
+    var title = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
+    canvas.title = title;
     var temp1 = +new Date;
-    showBoard.options.text = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
-    var button = document.createElement('button');
-    button.innerHTML = name;
-    button.id = name;
-    document.querySelector('#buttons').appendChild(button);
+    showBoard.options.text = title;
     renderQueue.push(showBoard);
   });
 
@@ -185,7 +177,6 @@ var init = function() {
 var ajax = function(url, successCallback, failCallback) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
-
   request.onreadystatechange = function() {
     if (this.readyState === 4) {
 
@@ -196,7 +187,6 @@ var ajax = function(url, successCallback, failCallback) {
       }
     }
   };
-
   request.send();
   request = null;
 };

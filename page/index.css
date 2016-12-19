@@ -460,15 +460,10 @@ template {
   position: relative;
 }
 
-#buttons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-canvas {
+#boards canvas {
   background: #ebebeb;
   margin: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 .github-ribbon {
@@ -509,8 +504,7 @@ canvas {
 
 @media only screen and (max-width: 500px) {
   .github-ribbon,
-  #boards,
-  #buttons,
+  #boards
   hr {
     display: none;
   }
