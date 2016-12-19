@@ -132,9 +132,7 @@ var init = function() {
     var res = handle(makeRandomArray(comparison), function(a, b) {
       return a - b;
     }, function(array, current) {
-      if (!isMobile) {
-        showBoard.addToBuffer(array.slice(0), current);
-      }
+      showBoard.addToBuffer(array.slice(0), current);
     });
     var temp1 = +new Date;
     var title = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
@@ -179,7 +177,6 @@ var ajax = function(url, successCallback, failCallback) {
   request.open('GET', url, true);
   request.onreadystatechange = function() {
     if (this.readyState === 4) {
-
       if (this.status >= 200 && this.status < 400) {
         successCallback(this.responseText);
       } else {

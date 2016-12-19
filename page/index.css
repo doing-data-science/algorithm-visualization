@@ -504,9 +504,13 @@ template {
 
 @media only screen and (max-width: 500px) {
   .github-ribbon,
-  #boards
+  #boards canvas,
   hr {
     display: none;
+  }
+
+  #boards canvas:first-child {
+    display: block!important;
   }
 
   #page {
