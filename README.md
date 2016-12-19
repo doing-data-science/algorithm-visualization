@@ -43,7 +43,7 @@ Space complexity(Auxiliary)
 
 ---
 
-[monitor.js](//github.com/xudafeng/monitor.js)
+[monitor.js](//xudafeng.github.io/monitor.js)
 
 ## License
 
