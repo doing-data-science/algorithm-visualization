@@ -136,9 +136,9 @@ var init = function() {
         showBoard.addToBuffer(array.slice(0), current);
       }
     });
+    var temp1 = +new Date;
     var title = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
     canvas.title = title;
-    var temp1 = +new Date;
     showBoard.options.text = title;
     renderQueue.push(showBoard);
   });
