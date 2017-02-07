@@ -37,6 +37,12 @@ Space complexity(Auxiliary)
   - Dijkstra
 - Topological Sort
 - [Astar](//github.com/xudafeng/AStar) [demo](//xudafeng.github.io/pillow/examples/astar/)
+- Data mining
+  - Cluster Analysis
+  - Decision Tree r2d3
+  - Artificial Neural Network
+  - Naive Bayes classifier
+  - k-Nearest Neighbor
 
 ## Data Structures[TODO]
 
