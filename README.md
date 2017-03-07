@@ -1,13 +1,13 @@
 # Algorithm Collection [![build status][travis-image]][travis-url]
 
-[travis-image]: https://img.shields.io/travis/xudafeng/algorithm-collection.svg?style=flat-square
-[travis-url]: https://travis-ci.org/xudafeng/algorithm-collection
+[travis-image]: https://img.shields.io/travis/doing-data-science/algorithm-collection.svg?style=flat-square
+[travis-url]: https://travis-ci.org/doing-data-science/algorithm-collection
 
 ---
 
 Visualization and Audibilization of algorithms.
 
-### [Live demo](//xudafeng.github.io/algorithm-collection)
+### [Live demo](//doing-data-science.github.io/algorithm-collection)
 
 ## Sorting algorithms
 
@@ -46,7 +46,7 @@ Space complexity(Auxiliary)
 
 ## Data Structures[TODO]
 
-- [BinaryHeap](//github.com/xudafeng/BinaryHeap)
+- [BinaryHeap](//github.com/doing-data-science/BinaryHeap)
 - [LinkedList](//github.com/xudafeng/autoresponsive-common)
 
 ---
