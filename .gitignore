@@ -7,6 +7,5 @@ Thumbs.db
 coverage/
 logs/
 .project
-.config.json
 *.sw*
 *.un~

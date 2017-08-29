@@ -1,9 +1,12 @@
+'use strict';
+
 require('should');
 var fs = require('fs');
 var path = require('path');
 
 var sortingFiles = fs.readdirSync(path.join(__dirname, '..', 'sorting'));
 var sorting = {};
+
 sortingFiles.map(file => {
   try {
     Object.assign(sorting, require(`../sorting/${file}`));
@@ -17,6 +20,7 @@ function fibonacci(n) {
 
 var len = 10;
 var array = [];
+
 while (len--) {
   array.push(fibonacci(len));
 }
