@@ -51,7 +51,16 @@ Space complexity(Auxiliary)
 
 ---
 
-[monitor.js](//pillowjs.github.io/monitor.js)
+## Test Coverage
+
+``` bash
+$ npm i
+$ npm run test
+```
+
+## Thanks To
+
+- [monitor.js](//pillowjs.github.io/monitor.js)
 
 ## License
 
