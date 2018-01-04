@@ -141,8 +141,8 @@ var init = function() {
     renderQueue.push(showBoard);
   });
 
-  var Timer = Monitor.Timer;
-  var FPSBoard = Monitor.FPSBoard;
+  var Timer = monitor.Timer;
+  var FPSBoard = monitor.FPSBoard;
 
   var fpsBoard = new FPSBoard({
     container: '#boards',
