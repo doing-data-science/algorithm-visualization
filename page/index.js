@@ -126,7 +126,7 @@ var init = function() {
       }, function(array, current) {
         showBoard.addToBuffer(array.slice(0), current);
       });
-    });
+    }, false);
     showBoard.clearBuffer();
     var temp = +new Date;
     var res = handle(makeRandomArray(comparison), function(a, b) {
@@ -165,11 +165,10 @@ var init = function() {
 
   timer.start();
 
-  setTimeout(function() {
-    renderQueue.forEach(function(item) {
-      item.clearBuffer();
-    });
-  }, 10 * 1000);
+  renderQueue.forEach(function(item) {
+    item.render();
+    item.clearBuffer();
+  });
 };
 
 var ajax = function(url, successCallback, failCallback) {

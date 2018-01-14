@@ -55,7 +55,7 @@ Space complexity(Auxiliary)
 
 ## Test Coverage
 
-``` bash
+```bash
 $ npm i
 $ npm run test
 ```
@@ -66,4 +66,4 @@ $ npm run test
 
 ## License
 
-MIT Licensed. Copyright (c).
+MIT Licensed.

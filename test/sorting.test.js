@@ -1,8 +1,8 @@
 'use strict';
 
-require('should');
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
 
 var sortingFiles = fs.readdirSync(path.join(__dirname, '..', 'sorting'));
 var sorting = {};
@@ -29,51 +29,51 @@ describe('sorting', function() {
 
   it('bogoSort', function() {
     var res = sorting.bogoSort(array.slice(0));
-    res.join().should.not.be.equal(array.slice(0).join());
+    assert.notEqual(res, array.slice(0));
   });
 
   it('bubbleSort', function() {
     var res = sorting.bubbleSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
     res = sorting.bubbleSort(array.slice(0), function(a, b) {
       return b - a;
     });
-    res.join().should.be.equal(array.slice(0).join());
+    assert.deepEqual(res.slice(0), array.slice(0));
   });
 
   it('bucketSort', function() {
     var res = sorting.bucketSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('heapSort', function() {
     var res = sorting.heapSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('insertionSort', function() {
     var res = sorting.insertionSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('mergeSort', function() {
     var res = sorting.mergeSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('quickSort', function() {
     var res = sorting.quickSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('selectionSort', function() {
     var res = sorting.selectionSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
   it('shellSort', function() {
     var res = sorting.shellSort(array.slice(0));
-    res.join().should.be.equal(array.slice(0).reverse().join());
+    assert.deepEqual(res.slice(0), array.slice(0).reverse());
   });
 
 });
