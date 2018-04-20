@@ -1,15 +1,27 @@
 # Algorithm Collection [![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url]
 
-[travis-image]: https://img.shields.io/travis/doing-data-science/algorithm-collection.svg?style=flat-square
-[travis-url]: https://travis-ci.org/doing-data-science/algorithm-collection
-[coveralls-image]: https://img.shields.io/coveralls/doing-data-science/algorithm-collection.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/doing-data-science/algorithm-collection?branch=master
+[travis-image]: https://img.shields.io/travis/doing-data-science/algorithm-visualization.svg?style=flat-square
+[travis-url]: https://travis-ci.org/doing-data-science/algorithm-visualization
+[coveralls-image]: https://img.shields.io/coveralls/doing-data-science/algorithm-visualization.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/doing-data-science/algorithm-visualization?branch=master
 
 ---
 
 Visualization and Audibilization of algorithms.
 
-### [Live demo](//doing-data-science.github.io/algorithm-collection)
+### [Live demo](//doing-data-science.github.io/algorithm-visualization)
+
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|
+| :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Mon Aug 19 2019 10:30:56 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
 
 ## Sorting algorithms
 
