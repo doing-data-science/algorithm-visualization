@@ -23,14 +23,14 @@
     var len = array.length - 1;
     while (len--) {
       var random = Math.floor(Math.random() * len);
-      swap(array, len, random)
+      swap(array, len, random);
     }
     return array;
   }
 
   function isSorted(array, cmp, handle) {
-    for(var i = 1; i < array.length; i++) {
-      handle(array, array[i])
+    for (var i = 1; i < array.length; i++) {
+      handle(array, array[i]);
       if (cmp(array[i - 1], array[i]) > 0) {
         return false;
       }

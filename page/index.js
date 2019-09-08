@@ -5,6 +5,10 @@ var WIDTH = boardWidth / 3 - 15;
 
 var isMobile = boardWidth < 500;
 
+var sorting = window.sorting;
+var monitor = window.monitor;
+var marked = window.marked;
+
 if (isMobile) {
   WIDTH = boardWidth;
 }
@@ -104,7 +108,7 @@ var makeRandomArray = function(size) {
     res.push(size / 1.5);
   }
   res = res.sort(function() {
-    return 0.5 - Math.random()
+    return 0.5 - Math.random();
   });
   return res;
 };
@@ -128,13 +132,13 @@ var init = function() {
       });
     }, false);
     showBoard.clearBuffer();
-    var temp = +new Date;
-    var res = handle(makeRandomArray(comparison), function(a, b) {
+    var temp = +new Date();
+    handle(makeRandomArray(comparison), function(a, b) {
       return a - b;
     }, function(array, current) {
       showBoard.addToBuffer(array.slice(0), current);
     });
-    var temp1 = +new Date;
+    var temp1 = +new Date();
     var title = name + ' - comparisons: ' + comparison + ' spent: ' + (temp1 - temp) + ' ms';
     canvas.title = title;
     showBoard.options.text = title;

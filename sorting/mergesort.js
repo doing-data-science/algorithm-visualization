@@ -35,18 +35,18 @@
     }
 
     var work = [];
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       work.push([array[i]]);
     }
     work.push([]);
     handle(array, 0);
 
-    for (var lim = array.length; lim > 1; lim = Math.floor((lim + 1) / 2)) {
-      for (var j = 0,k = 0; k < lim; j++, k += 2) {
+    for (let lim = array.length; lim > 1; lim = Math.floor((lim + 1) / 2)) {
+      for (var j = 0, k = 0; k < lim; j++, k += 2) {
         work[j] = merge(work[k], work[k + 1], cmp);
         var num = 0;
         var arr = [];
-        for (var i = 0; i < work.length; i++) {
+        for (let i = 0; i < work.length; i++) {
           var temp = work[i];
           arr = arr.concat(temp);
           num += temp.length;

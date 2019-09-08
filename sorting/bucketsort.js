@@ -16,19 +16,19 @@
   function insertionSort(buckets, current, handle) {
     var currentBucket = buckets[current];
     for (var i = 1; i < currentBucket.length; i++) {
-      var current = currentBucket[i];
+      var _current = currentBucket[i];
       var j = i - 1;
-      while (j >= 0 && current < currentBucket[j]) {
+      while (j >= 0 && _current < currentBucket[j]) {
         currentBucket[j + 1] = currentBucket[j];
         j--;
       }
-      currentBucket[j + 1] = current;
+      currentBucket[j + 1] = _current;
 
       var array = [];
       buckets.forEach(currentBucket => {
         array = array.concat(currentBucket);
       });
-      handle(array, current);
+      handle(array, _current);
     }
   }
 

@@ -35,6 +35,6 @@
     return array;
   };
 
-  exports.selectionSort =  selectionSort;
+  exports.selectionSort = selectionSort;
 
 });
