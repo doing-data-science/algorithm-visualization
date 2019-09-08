@@ -53,6 +53,17 @@ const drawRect = (x, y, width, height) => {
   ctx.stroke();
 };
 
+const drawLine = (sx, sy, ex, ey) => {
+  const startX = WIDTH / 2;
+  const startY = HEIGHT / 2;
+  ctx.beginPath();
+  ctx.strokeStyle = 'rgb(200, 0, 0)';
+  ctx.lineWidth = 1;
+  ctx.moveTo(startX + sx, startY - sy);
+  ctx.lineTo(startX + ex, startY - ey);
+  ctx.stroke();
+};
+
 const render = () => {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -72,6 +83,9 @@ const render = () => {
 
   // draw object
   drawRect(100, 110, 80, 60);
+
+  // draw line
+  drawLine(0, 0, 280, 160);
 };
 
 timer.update(() => {
