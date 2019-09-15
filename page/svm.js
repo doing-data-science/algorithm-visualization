@@ -85,7 +85,7 @@ const render = () => {
   drawRect(100, 110, 80, 60);
 
   // draw line
-  drawLine(0, 0, 280, 160);
+  drawLine(0, 0, 300, 200);
 };
 
 timer.update(() => {
