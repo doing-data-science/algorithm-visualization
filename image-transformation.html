@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="algorithm demo">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Algorithm Collection - Visualization and Audibilization of algorithms</title>
+  <link rel="stylesheet" href="./page/index.css" />
+  <link rel="stylesheet" href="./page/image-transformation.css" />
+  <script src="//npmcdn.com/monitor.js@latest/build/monitor.js"></script>
+  <base target="_blank" />
+</head>
+<body>
+  <div id="page">
+    <div class="github-ribbon">
+      <a target="_blank" href="//github.com/doing-data-science/algorithm-visualization">Fork me on GitHub</a>
+    </div>
+    <div id="boards"></div>
+    <canvas id="origin" width="350" height="350">Browser not supported for Canvas.</canvas>
+    <br />
+    <canvas id="gray" width="350" height="350">Browser not supported for Canvas.</canvas>
+    <canvas id="binaryzation" width="350" height="350">Browser not supported for Canvas.</canvas>
+    <ul>
+      <li>
+        <input type="range" id="threshold" /><label for="threshold" id="threshold-label">128</label>
+      </li>
+      <li>
+        <input type="file" id="file" accept="image/*" />
+      </li>
+    </ul>
+  </div>
+  <script src="./page/image-transformation.js"></script>
+</body>
+</html>
