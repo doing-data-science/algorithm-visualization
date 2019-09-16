@@ -53,10 +53,13 @@ Space complexity(Auxiliary)
 - [Astar](//github.com/xudafeng/AStar) [demo](//xudafeng.github.io/pillow/examples/astar/)
 - Data mining
   - Cluster Analysis
-  - Decision Tree r2d3
+  - Decision Tree
   - Artificial Neural Network
   - Naive Bayes classifier
   - k-Nearest Neighbor
+- Image Transformation
+  - Binaryzation & Gray Level [demo](//doing-data-science.github.io/algorithm-visualization/image-transformation.html)
+  - svm [demo](//doing-data-science.github.io/algorithm-visualization/svm.html)
 
 ## Data Structures[TODO]
 
