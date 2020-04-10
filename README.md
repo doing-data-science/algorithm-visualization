@@ -50,7 +50,7 @@ Space complexity(Auxiliary)
 - Shortest Paths Problem
   - Dijkstra
 - Topological Sort
-- [Astar](//github.com/xudafeng/AStar) [demo](//xudafeng.github.io/pillow/examples/astar/)
+- [Astar](//github.com/xudafeng/AStar) [demo](//pillowjs.github.io/pillow-sample/astar/)
 - Data mining
   - Cluster Analysis
   - Decision Tree
