@@ -1,8 +1,8 @@
 # Algorithm Collection [![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url]
 
-[travis-image]: https://img.shields.io/travis/doing-data-science/algorithm-visualization.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/doing-data-science/algorithm-visualization.svg
 [travis-url]: https://travis-ci.org/doing-data-science/algorithm-visualization
-[coveralls-image]: https://img.shields.io/coveralls/doing-data-science/algorithm-visualization.svg?style=flat-square
+[coveralls-image]: https://img.shields.io/coveralls/doing-data-science/algorithm-visualization.svg
 [coveralls-url]: https://coveralls.io/r/doing-data-science/algorithm-visualization?branch=master
 
 ---
