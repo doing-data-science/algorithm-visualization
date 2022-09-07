@@ -7,7 +7,6 @@ var isMobile = boardWidth < 500;
 
 var sorting = window.sorting;
 var monitor = window.monitor;
-var marked = window.marked;
 
 if (isMobile) {
   WIDTH = boardWidth;
@@ -192,5 +191,5 @@ var ajax = function(url, successCallback, failCallback) {
 };
 
 ajax('./README.md', function(d) {
-  document.querySelector('#readme').innerHTML = marked(d);
+  document.querySelector('#readme').innerHTML = marked.parse(d);
 });
